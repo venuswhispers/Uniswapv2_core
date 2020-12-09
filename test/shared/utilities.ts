@@ -1,21 +1,18 @@
 import { Contract } from 'ethers'
-import { Web3Provider } from 'ethers/providers'
-import {
-  BigNumber,
-  bigNumberify,
-  getAddress,
-  keccak256,
-  defaultAbiCoder,
-  toUtf8Bytes,
-  solidityPack
-} from 'ethers/utils'
+import { Web3Provider } from '@ethersproject/providers'
+import { BigNumber } from '@ethersproject/bignumber'
+import { defaultAbiCoder } from '@ethersproject/abi'
+import { getAddress } from '@ethersproject/address';
+import { keccak256 } from '@ethersproject/keccak256'
+import { pack as solidityPack } from '@ethersproject/solidity'
+import { toUtf8Bytes } from '@ethersproject/strings'
 
 const PERMIT_TYPEHASH = keccak256(
   toUtf8Bytes('Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)')
 )
 
 export function expandTo18Decimals(n: number): BigNumber {
-  return bigNumberify(n).mul(bigNumberify(10).pow(18))
+  return BigNumber.from(n).mul(BigNumber.from(10).pow(18))
 }
 
 function getDomainSeparator(name: string, tokenAddress: string) {
@@ -81,7 +78,7 @@ export async function getApprovalDigest(
 
 export async function mineBlock(provider: Web3Provider, timestamp: number): Promise<void> {
   await new Promise(async (resolve, reject) => {
-    ;(provider._web3Provider.sendAsync as any)(
+    ;(provider.provider.sendAsync as any)(
       { jsonrpc: '2.0', method: 'evm_mine', params: [timestamp] },
       (error: any, result: any): void => {
         if (error) {
@@ -95,5 +92,5 @@ export async function mineBlock(provider: Web3Provider, timestamp: number): Prom
 }
 
 export function encodePrice(reserve0: BigNumber, reserve1: BigNumber) {
-  return [reserve1.mul(bigNumberify(2).pow(112)).div(reserve0), reserve0.mul(bigNumberify(2).pow(112)).div(reserve1)]
+  return [reserve1.mul(BigNumber.from(2).pow(112)).div(reserve0), reserve0.mul(BigNumber.from(2).pow(112)).div(reserve1)]
 }
