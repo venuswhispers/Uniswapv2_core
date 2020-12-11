@@ -22,6 +22,8 @@
     "node": ">=10"
   },
   "devDependencies": {
+    "@eth-optimism/ovm-toolchain": "^0.0.2-alpha.0",
+    "@eth-optimism/solc": "0.5.16-alpha.7",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
@@ -38,12 +40,19 @@
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
-    "precompile": "yarn clean",
-    "compile": "waffle .waffle.json",
-    "pretest": "yarn compile",
-    "prepublishOnly": "yarn test",
-    "test:evm": "yarn compile && mocha",
-    "test:ovm": "yarn compile && echo OVM TESTS NOT IMPLEMENTED"
+    "precompile:evm": "yarn clean",
+    "precompile:ovm": "yarn clean",
+    "compile:evm": "waffle .waffle.json",
+    "compile:ovm": "waffle .waffle-ovm.json",
+    "pretest:evm": "yarn compile:evm",
+    "pretest:ovm": "yarn compile:ovm",
+    "test:evm": "mocha",
+    "test:ovm": "echo OVM TESTS NOT IMPLEMENTED",
+    "prepublishOnly": "yarn test:evm && yarn test:ovm"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "volta": {
+    "node": "10.23.0",
+    "yarn": "1.22.10"
+  }
 }
