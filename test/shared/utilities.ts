@@ -6,6 +6,7 @@ import { getAddress } from '@ethersproject/address';
 import { keccak256 } from '@ethersproject/keccak256'
 import { pack as solidityPack } from '@ethersproject/solidity'
 import { toUtf8Bytes } from '@ethersproject/strings'
+import { chainId } from './config'
 
 const PERMIT_TYPEHASH = keccak256(
   toUtf8Bytes('Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)')
@@ -23,7 +24,7 @@ function getDomainSeparator(name: string, tokenAddress: string) {
         keccak256(toUtf8Bytes('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)')),
         keccak256(toUtf8Bytes(name)),
         keccak256(toUtf8Bytes('1')),
-        1,
+        chainId,
         tokenAddress
       ]
     )

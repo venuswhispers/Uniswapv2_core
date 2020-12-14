@@ -47,12 +47,12 @@
     "pretest:evm": "yarn compile:evm",
     "pretest:ovm": "yarn compile:ovm",
     "test:evm": "mocha",
-    "test:ovm": "echo OVM TESTS NOT IMPLEMENTED",
+    "test:ovm": "MODE=OVM && mocha",
     "prepublishOnly": "yarn test:evm && yarn test:ovm"
   },
   "license": "GPL-3.0-or-later",
   "volta": {
-    "node": "10.23.0",
+    "node": "10.16.0",
     "yarn": "1.22.10"
   }
 }

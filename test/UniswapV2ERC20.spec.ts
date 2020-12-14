@@ -6,10 +6,11 @@ import { defaultAbiCoder } from '@ethersproject/abi'
 import { hexlify } from '@ethersproject/bytes'
 import { keccak256 } from '@ethersproject/keccak256'
 import { toUtf8Bytes } from '@ethersproject/strings'
-import { solidity, MockProvider, deployContract } from 'ethereum-waffle'
+import { solidity, deployContract } from 'ethereum-waffle'
 import { ecsign } from 'ethereumjs-util'
 
 import { expandTo18Decimals, getApprovalDigest } from './shared/utilities'
+import { provider, chainId } from './shared/config'
 
 import ERC20 from '../build/ERC20.json'
 
@@ -19,13 +20,6 @@ const TOTAL_SUPPLY = expandTo18Decimals(10000)
 const TEST_AMOUNT = expandTo18Decimals(10)
 
 describe('UniswapV2ERC20', () => {
-  const provider = new MockProvider({
-    ganacheOptions: {
-      hardfork: 'istanbul',
-      mnemonic: 'horn horn horn horn horn horn horn horn horn horn horn horn',
-      gasLimit: 9999999
-    }
-  })
   const [wallet, other] = provider.getWallets()
 
   let token: Contract
@@ -50,7 +44,7 @@ describe('UniswapV2ERC20', () => {
             ),
             keccak256(toUtf8Bytes(name)),
             keccak256(toUtf8Bytes('1')),
-            1,
+            chainId,
             token.address
           ]
         )
