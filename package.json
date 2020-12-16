@@ -22,7 +22,7 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "@eth-optimism/ovm-toolchain": "^0.0.2-alpha.0",
+    "@eth-optimism/ovm-toolchain": "^0.0.2-alpha.2",
     "@eth-optimism/solc": "0.5.16-alpha.7",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
@@ -47,7 +47,7 @@
     "pretest:evm": "yarn compile:evm",
     "pretest:ovm": "yarn compile:ovm",
     "test:evm": "mocha",
-    "test:ovm": "MODE=OVM && mocha",
+    "test:ovm": "export MODE=OVM && mocha",
     "prepublishOnly": "yarn test:evm && yarn test:ovm"
   },
   "license": "GPL-3.0-or-later",
