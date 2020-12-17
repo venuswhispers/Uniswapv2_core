@@ -6,7 +6,7 @@ import { solidity, createFixtureLoader } from 'ethereum-waffle'
 
 import { getCreate2Address } from './shared/utilities'
 import { factoryFixture } from './shared/fixtures'
-import { provider } from './shared/config'
+import { provider, isOVM } from './shared/config'
 
 import UniswapV2Pair from '../build/UniswapV2Pair.json'
 
@@ -64,7 +64,7 @@ describe('UniswapV2Factory', () => {
   it('createPair:gas', async () => {
     const tx = await factory.createPair(...TEST_ADDRESSES)
     const receipt = await tx.wait()
-    expect(receipt.gasUsed).to.eq(2512920)
+    expect(receipt.gasUsed).to.eq(isOVM ? 4121083 : 2512920)
   })
 
   it('setFeeTo', async () => {

@@ -23,4 +23,4 @@ const provider = isOVM ? new waffleV3.MockProvider(options) : new MockProvider(o
 // Get Chain ID
 const chainId = isOVM ? 420 : 1
 
-export { provider, chainId }
+export { provider, chainId, isOVM }

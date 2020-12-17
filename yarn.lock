@@ -575,25 +575,25 @@
     "@ethersproject/strings" "^5.0.4"
 
 "@ledgerhq/cryptoassets@^5.27.2":
-  version "5.35.1"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.35.1.tgz#daa933d27bfccdbb351139387f5cd85bd6c641b4"
-  integrity sha512-9Ed+SIj6uQjKMaWYjaAKxq7n5CAKAu1JFb3Tv76q3AstYhko8SDtvzyqyRpCr4tSMHAvLQIohqRcfuHXbjHwIg==
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.36.0.tgz#8c26e76c77ac6a912901d54578dd1cb88474b79d"
+  integrity sha512-NaebuX0kDkhtHmp0WfGSMCzXnT4MsSQJUyUVzBaOv4iljlSwp09tMburBbo6jffuBShLx+yH4jQAbrNbN8TmSA==
   dependencies:
     invariant "2"
 
-"@ledgerhq/devices@^5.26.0", "@ledgerhq/devices@^5.34.0":
-  version "5.34.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.34.0.tgz#4cb073a7bc9528f42f539241fedf44c0c6b451dc"
-  integrity sha512-oRoZDDfufXAv9KofQdOXc0QztISa9x/YVdiWs55iOlNRQjWYHSPFzeSP6+J+tN0Au/GS9v+wcnTf+tHCtVz27Q==
+"@ledgerhq/devices@^5.26.0", "@ledgerhq/devices@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.36.0.tgz#f4493bea44390325fcc7a2a0d03bba69fc1604ec"
+  integrity sha512-EwQwLZcz66a2V07Bad0J+Q67LR2afj2NJChJNcA6/gqvzXrtNtJ37u1co9eLU7S5GGll5JGi7KdBqAD9ZTHaaQ==
   dependencies:
-    "@ledgerhq/errors" "^5.34.0"
-    "@ledgerhq/logs" "^5.30.0"
+    "@ledgerhq/errors" "^5.36.0"
+    "@ledgerhq/logs" "^5.36.0"
     rxjs "^6.6.3"
 
-"@ledgerhq/errors@^5.26.0", "@ledgerhq/errors@^5.34.0":
-  version "5.34.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.34.0.tgz#c003b0929f8ca0c74901a11a88b3e3db4b40e4b7"
-  integrity sha512-8Td60sOP5wzsjmxmj9Q5hjrr1XjCfB3Vdifq+1fiD6rpjyscYLgmoP2y5GYDPceDhalA/GOrKNSf+aIVVmBNOw==
+"@ledgerhq/errors@^5.26.0", "@ledgerhq/errors@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.36.0.tgz#9d178b54116ae81b1fbdfa80afcd33981453be4c"
+  integrity sha512-VS6aFzn3IDUmSLaX2kAPg5sQOc5m7IwvswAGvoMc3FCi9/a1dXWwtiYn5rWd1QjDJlTKSfCwmSpvUMp8FKoY2Q==
 
 "@ledgerhq/hw-app-eth@5.27.2":
   version "5.27.2"
@@ -607,15 +607,15 @@
     rlp "^2.2.6"
 
 "@ledgerhq/hw-transport-node-hid-noevents@^5.26.0":
-  version "5.34.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid-noevents/-/hw-transport-node-hid-noevents-5.34.0.tgz#c31cc3e3033f6fbf77b81c3a9c34230aadd6f3cb"
-  integrity sha512-n5KRdZ6nmDrmsEXFjIipNdx9rhHbEFmZ5YDoUkdShvKFmaDeKVn0h7RCBwblJRITUZl0RfBzBuBRlpNjQsFfqg==
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid-noevents/-/hw-transport-node-hid-noevents-5.36.0.tgz#a25bdf0d10f9eac73148040e5887f40ca46f6a93"
+  integrity sha512-8zwokin0KFJaTzhy7oLVcy4QCNUjMuc49wPLnr3zxLqhO1innMp2crUxjIFNLRGJm/TfDLnlpxTPud6WZoo5zg==
   dependencies:
-    "@ledgerhq/devices" "^5.34.0"
-    "@ledgerhq/errors" "^5.34.0"
-    "@ledgerhq/hw-transport" "^5.34.0"
-    "@ledgerhq/logs" "^5.30.0"
-    node-hid "2.0.0-0"
+    "@ledgerhq/devices" "^5.36.0"
+    "@ledgerhq/errors" "^5.36.0"
+    "@ledgerhq/hw-transport" "^5.36.0"
+    "@ledgerhq/logs" "^5.36.0"
+    node-hid "2.1.1"
 
 "@ledgerhq/hw-transport-node-hid@5.26.0":
   version "5.26.0"
@@ -650,19 +650,19 @@
     "@ledgerhq/errors" "^5.26.0"
     events "^3.2.0"
 
-"@ledgerhq/hw-transport@^5.26.0", "@ledgerhq/hw-transport@^5.34.0":
-  version "5.34.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-5.34.0.tgz#b27eb0d9941a2e6220e5af3e3d4f48ce8a993982"
-  integrity sha512-JxhqU9sBn+WH3CPMus9b70SED7LEeW17xw0VL5aRdxFu4YS5rhy5Xf4Sd5jIQfyDkHik1ouzfJVuQEju8+GGBw==
+"@ledgerhq/hw-transport@^5.26.0", "@ledgerhq/hw-transport@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-5.36.0.tgz#b6e951c411182ece59c7b527f948240d1b0a8a51"
+  integrity sha512-rwLTBUsdGCC3Ka4G99sqGbbyVhkVxXd4eWWeOb8gnuKhrTydZGkkP3JdZSHgWSrVRYTAUmkE1AnUmchbfh361w==
   dependencies:
-    "@ledgerhq/devices" "^5.34.0"
-    "@ledgerhq/errors" "^5.34.0"
+    "@ledgerhq/devices" "^5.36.0"
+    "@ledgerhq/errors" "^5.36.0"
     events "^3.2.0"
 
-"@ledgerhq/logs@^5.26.0", "@ledgerhq/logs@^5.30.0":
-  version "5.30.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-5.30.0.tgz#76e8d7e5a06a73c9b99da51fa5befd5cfd5309d4"
-  integrity sha512-wUhg2VTfUrWihjdGqKkH/s7TBzdIM1yyd2LiscYsfTX2I0xYDMnpE+NkMReeGU8PN3QhCPgnlg9/P9V6UWoJBA==
+"@ledgerhq/logs@^5.26.0", "@ledgerhq/logs@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-5.36.0.tgz#78721347162fb834d90effa1123b363dc46e3a52"
+  integrity sha512-HnD/hByteUL1MsJu1lMinY9bNq8++5mWJ8qHCW9dLC9LbsvWIqwLwmZiGcW0D2tX9p0/C5ESuIpJ9B/d2dReuw==
 
 "@nomiclabs/buidler@^1.4.4":
   version "1.4.8"
@@ -904,9 +904,9 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "14.14.13"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.13.tgz#9e425079799322113ae8477297ae6ef51b8e0cdf"
-  integrity sha512-vbxr0VZ8exFMMAjCW8rJwaya0dMCDyYW2ZRdTyjtrCvJoENMpdUHOT/eTzvgyA5ZnqRZ/sI0NwqAxNHKYokLJQ==
+  version "14.14.14"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.14.tgz#f7fd5f3cc8521301119f63910f0fb965c7d761ae"
+  integrity sha512-UHnOPWVWV1z+VV8k6L1HhG7UbGBgIdghqF3l9Ny9ApPghbjICXkUJSd/b9gOgQfjM1r+37cipdw/HJ3F6ICEnQ==
 
 "@types/node@^12.12.6":
   version "12.19.9"
@@ -2871,9 +2871,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.47:
-  version "1.3.625"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.625.tgz#a7bd18da4dc732c180b2e95e0e296c0bf22f3bd6"
-  integrity sha512-CsLk/r0C9dAzVPa9QF74HIXduxaucsaRfqiOYvIv2PRhvyC6EOqc/KbpgToQuDVgPf3sNAFZi3iBu4vpGOwGag==
+  version "1.3.627"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.627.tgz#4acdbbbbe31eb605fba8380063fd9c8a7e5ca4a0"
+  integrity sha512-O5IVRS4sCxP2+vECAp7uHkaI8V+dKYpuCyBcLn+hqVAOy/RONd8zx+6eH7TuWSTBYs/oUrzBXkNMZuVsQd58kQ==
 
 elliptic@6.5.3, elliptic@^6.4.0, elliptic@^6.5.2, elliptic@^6.5.3:
   version "6.5.3"
@@ -3309,7 +3309,6 @@ ethereumjs-blockchain@^4.0.3:
     semaphore "^1.1.0"
 
 ethereumjs-common@1.5.0, "ethjs-common-v1@npm:ethereumjs-common@1.5.0":
-  name ethjs-common-v1
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/ethereumjs-common/-/ethereumjs-common-1.5.0.tgz#d3e82fc7c47c0cef95047f431a99485abc9bb1cd"
   integrity sha512-SZOjgK1356hIY7MRj3/ma5qtfr/4B5BL+G4rP/XSMYr2z1H5el4RX5GReYCKmQmYI/nSBmRnwrZ17IfHuG0viQ==
@@ -3336,7 +3335,6 @@ ethereumjs-tx@^1.1.1, ethereumjs-tx@^1.2.0, ethereumjs-tx@^1.2.2, ethereumjs-tx@
     ethereumjs-util "^5.0.0"
 
 ethereumjs-util@6.2.1, ethereumjs-util@^6.0.0, ethereumjs-util@^6.1.0, ethereumjs-util@^6.2.0, "ethjs-util-v6@npm:ethereumjs-util@6.2.1":
-  name ethjs-util-v6
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-6.2.1.tgz#fcb4e4dd5ceacb9d2305426ab1a5cd93e3163b69"
   integrity sha512-W2Ktez4L01Vexijrm5EB6w7dg4n/TgpoYU4avuT5T3Vmnw/eCRtiBrJfQYS/DCSvDIOLn2k57GcHdeBcgVxAqw==
@@ -3439,7 +3437,6 @@ ethereumjs-wallet@0.6.5:
     uuid "^3.3.2"
 
 "ethers-v4@npm:ethers@4", ethers@^4.0.45:
-  name ethers-v4
   version "4.0.48"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-4.0.48.tgz#330c65b8133e112b0613156e57e92d9009d8fbbe"
   integrity sha512-sZD5K8H28dOrcidzx9f8KYh8083n5BexIO3+SbE4jK83L85FxtpXZBCQdXb8gkg+7sBqomcLhhkU7UHL+F7I2g==
@@ -5802,10 +5799,10 @@ node-hid@1.3.0:
     node-abi "^2.18.0"
     prebuild-install "^5.3.4"
 
-node-hid@2.0.0-0:
-  version "2.0.0-0"
-  resolved "https://registry.yarnpkg.com/node-hid/-/node-hid-2.0.0-0.tgz#35daffb4708f27331ca4143af0b8cf338fea9908"
-  integrity sha512-Ywc4WaMANhvqHDTynRmbuP52ln76WiNRjjAom5l2uLyNY1wixCVjISi+SP4/Rfgcddq9UJM1sR5+lPD0GcvvMg==
+node-hid@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/node-hid/-/node-hid-2.1.1.tgz#f83c8aa0bb4e6758b5f7383542477da93f67359d"
+  integrity sha512-Skzhqow7hyLZU93eIPthM9yjot9lszg9xrKxESleEs05V2NcbUptZc5HFqzjOkSmL0sFlZFr3kmvaYebx06wrw==
   dependencies:
     bindings "^1.5.0"
     node-addon-api "^3.0.2"

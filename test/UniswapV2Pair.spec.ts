@@ -5,7 +5,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 
 import { expandTo18Decimals, mineBlock, encodePrice } from './shared/utilities'
 import { pairFixture } from './shared/fixtures'
-import { provider } from './shared/config'
+import { provider, isOVM } from './shared/config'
 import { AddressZero } from '@ethersproject/constants'
 
 const MINIMUM_LIQUIDITY = BigNumber.from(10).pow(3)
@@ -173,7 +173,7 @@ describe('UniswapV2Pair', () => {
     await mineBlock(provider, (await provider.getBlock('latest')).timestamp + 1)
     const tx = await pair.swap(expectedOutputAmount, 0, wallet.address, '0x', overrides)
     const receipt = await tx.wait()
-    expect(receipt.gasUsed).to.eq(73462)
+    expect(receipt.gasUsed).to.eq(isOVM ? 657108 : 73462)
   })
 
   it('burn', async () => {
