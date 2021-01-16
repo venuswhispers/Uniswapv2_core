@@ -64,6 +64,8 @@ Most existing Solidity projects will have three categories of changes required t
 
 Start by cloning the [Uniswap V2 Core](https://github.com/Uniswap/uniswap-v2-core) repo. Install dependencies with `yarn` and run tests with `yarn test` to make sure all tests pass.
 
+**NOTE**: This repo currently has a dependency resolution problem when installing with a lockfile. If a yarn.lock file exists, it is recommended to delete it before running `yarn`.
+
 ### Package Upgrades
 
 Because we want to support running tests on the EVM and OVM, let's setup the tasks for these two test suites with the following changes to `package.json`:
